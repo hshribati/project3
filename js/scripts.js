@@ -10,7 +10,7 @@ function initMap() {
     map: map,
     icon: {
       url: 'images/arrow-icon.png',  // Path to your arrow image
-      scaledSize: new google.maps.Size(20, 20),  // Adjust the size (width, height)
+      scaledSize: new google.maps.Size(50, 50),  // Adjust the size (width, height)
       anchor: new google.maps.Point(10, 20)      // Adjust the anchor point (center of the image)
     }
   });
