@@ -10,10 +10,3 @@ function initMap() {
     map: map
   });
 }
-
-// Ensure the API script callback is set to initialize the map
-window.onload = function() {
-  if (typeof initMap === 'function') {
-    // The callback to initMap will be automatically called by the Google Maps API
-  }
-}
