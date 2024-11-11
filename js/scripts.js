@@ -20,7 +20,7 @@ function initMap() {
 
   function animateMarker() {
     // Adjust marker's vertical position to create the movement
-    var newLat = location.lat + (offset * 0.0001);  // Adjust the multiplier to change the movement range
+    var newLat = location.lat + (offset * 0.0010);  // Adjust the multiplier to change the movement range
 
     marker.setPosition({lat: newLat, lng: location.lng});
 
@@ -31,7 +31,7 @@ function initMap() {
     }
 
     // Call this function again after 50ms for continuous movement
-    setTimeout(animateMarker, 50);
+    setTimeout(animateMarker, 70);
   }
 
   // Start the animation
