@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Maps</title>
-  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
-  <link rel="stylesheet" href="css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Map</title>
+    <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js" defer></script>
-       <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Resume</a></li>
-        <li><a href="tarek.html">Tarek</a></li>
-        <li><a href="falafel.html">Falafel</a></li>
-        <li><a href="map.html">Google Map</a></li>
-      </ul>
-    </nav>
-  </header>
- 
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Resume</a></li>
+                <li><a href="tarek.html">Tarek</a></li>
+                <li><a href="falafel.html">Falafel</a></li>
+                <li><a href="map.html">Google Map</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Location Map</h1>
+        <div id="map" style="height: 500px; width: 100%;"></div> <!-- Set map dimensions here -->
+    </main>
+
+    <!-- Add Google Maps API key below, replace YOUR_API_KEY with your actual API key -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
+</html>
