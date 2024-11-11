@@ -2,15 +2,28 @@ function initMap() {
   var location = {lat: -34.397, lng: 150.644};  
   var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
-    center: location
+    center: location,
+    zoomControl: false  // Disable the default zoom controls
+  });
+
+  // Custom zoom-in button
+  document.getElementById('zoom-in').addEventListener('click', function() {
+    var currentZoom = map.getZoom();
+    map.setZoom(currentZoom + 1);  // Zoom in
+  });
+
+  // Custom zoom-out button
+  document.getElementById('zoom-out').addEventListener('click', function() {
+    var currentZoom = map.getZoom();
+    map.setZoom(currentZoom - 1);  // Zoom out
   });
 
   var marker = new google.maps.Marker({
     position: location,
     map: map,
     icon: {
-      url: 'images/arrow-icon.png',  // Path to your arrow image
-      scaledSize: new google.maps.Size(50, 50),
+      url: 'images/arrow-icon.png',
+      scaledSize: new google.maps.Size(20, 20),
       anchor: new google.maps.Point(10, 20)
     }
   });
@@ -19,21 +32,14 @@ function initMap() {
   var direction = 1;
 
   function animateMarker() {
-    // Adjust marker's vertical position to create the movement
-    var newLat = location.lat + (offset * 0.0010);  // Adjust the multiplier to change the movement range
-
+    var newLat = location.lat + (offset * 0.0015);
     marker.setPosition({lat: newLat, lng: location.lng});
-
-    // Toggle the direction
     offset += direction;
     if (offset > 10 || offset < -10) {
-      direction *= -1;  // Change direction when the marker moves too far up or down
+      direction *= -1;
     }
-
-    // Call this function again after 50ms for continuous movement
     setTimeout(animateMarker, 70);
   }
 
-  // Start the animation
   animateMarker();
 }
