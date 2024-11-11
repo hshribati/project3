@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Map</title>
+    <title>Map Page</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
+
     <header>
         <nav>
             <ul>
@@ -20,11 +21,13 @@
     </header>
 
     <main>
-        <h1>Location Map</h1>
-        <div id="map" style="height: 500px; width: 100%;"></div> <!-- Set map dimensions here -->
+        <h1>Google Map</h1>
+        <div id="map" style="height: 500px; width: 100%;"></div>
     </main>
 
-    <!-- Add Google Maps API key below, replace YOUR_API_KEY with your actual API key -->
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    <!-- Google Maps API script with the API key -->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPsSL5_Dcdqcqvr23LbeT3PxHbGK63fYM&callback=initMap">
+    </script>
 </body>
 </html>
