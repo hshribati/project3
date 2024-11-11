@@ -123,6 +123,7 @@ footer {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
+  position: relative; /* Ensure it's a positioned container for zoom buttons */
   transition: transform 0.3s ease;
 }
 
@@ -136,12 +137,12 @@ footer {
   }
 }
 
-/* Custom Zoom Controls */
+/* Custom Zoom Controls inside the map */
 .custom-zoom {
   position: absolute;
   top: 20px;
   right: 20px;
-  z-index: 999;
+  z-index: 9999; /* Ensure buttons are on top */
   display: flex;
   flex-direction: column;
 }
