@@ -70,18 +70,5 @@ document.addEventListener("DOMContentLoaded", function () {
         section.insertAdjacentElement("beforebegin", toggleButton);
         section.id = `section-${index}`; // Assign unique IDs to each section if not already present
     });
-});
 
-// Optional: Smooth scroll effect for navigation links
-const navLinks = document.querySelectorAll("nav a");
-navLinks.forEach(link => {
-    link.addEventListener("click", function (event) {
-        event.preventDefault();
-        const targetId = this.getAttribute("href").substring(1);
-        const targetElement = document.getElementById(targetId);
-        if (targetElement) {
-            targetElement.scrollIntoView({ behavior: "smooth" });
-        }
-    });
-});
 
