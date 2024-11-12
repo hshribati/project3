@@ -45,30 +45,3 @@ function initMap() {
 }
 
 
-// Function to toggle visibility of an element
-function toggleVisibility(elementId) {
-    const element = document.getElementById(elementId);
-    if (element.style.display === "none") {
-        element.style.display = "block";
-    } else {
-        element.style.display = "none";
-    }
-}
-
-// Example usage: Add a toggle button for each section
-document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll("section");
-    sections.forEach((section, index) => {
-        const toggleButton = document.createElement("button");
-        toggleButton.textContent = "Show/Hide Section";
-        toggleButton.className = "toggle-btn";
-        
-        toggleButton.addEventListener("click", () => {
-            toggleVisibility(section.id);
-        });
-        
-        section.insertAdjacentElement("beforebegin", toggleButton);
-        section.id = `section-${index}`; // Assign unique IDs to each section if not already present
-    });
-
-
