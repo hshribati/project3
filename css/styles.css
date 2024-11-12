@@ -101,29 +101,13 @@ footer {
   width: 100%;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 1rem;
-  }
-
-  .image-content {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .center-image {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-}
-
 #map {
   width: 100%;
   height: 400px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin-top: 20px;
-  position: relative; /* Ensure it's a positioned container for zoom buttons */
+  position: relative;
   transition: transform 0.3s ease;
 }
 
@@ -131,18 +115,12 @@ footer {
   transform: scale(1.02);
 }
 
-@media (max-width: 768px) {
-  #map {
-    height: 300px;
-  }
-}
-
 /* Custom Zoom Controls inside the map at the bottom */
 .custom-zoom {
   position: absolute;
-  bottom: 20px; /* Position it at the bottom */
-  right: 20px;  /* Position it to the right */
-  z-index: 9999; /* Ensure buttons are on top */
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
   display: flex;
   flex-direction: column;
 }
@@ -168,4 +146,68 @@ footer {
 .zoom-btn:active {
   background-color: rgba(0, 123, 255, 0.7);
   transform: scale(0.9);
+}
+
+/* Media Queries for Mobile-Friendly Layout */
+
+/* First media query for tablets and larger phones */
+@media (min-width: 480px) and (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack navigation links vertically */
+        text-align: center;
+    }
+
+    .center-image {
+        width: 100%; /* Full-width image */
+        margin-right: 0; /* Remove side margin */
+    }
+
+    .text-content {
+        float: none; /* Remove floating for better readability */
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    section {
+        margin-bottom: 1.5rem; /* Reduce margin spacing */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+}
+
+/* Second media query for smaller mobile screens */
+@media (max-width: 479px) {
+    nav ul {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .image-content {
+        flex-direction: column;
+    }
+
+    .center-image, .text-content {
+        width: 100%;
+        margin: 0;
+        padding: 0.5rem;
+    }
+
+    section {
+        padding: 1rem;
+        font-size: 0.9rem; /* Adjust font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p, a, li {
+        font-size: 0.85rem; /* Adjust text size */
+    }
 }
