@@ -145,7 +145,6 @@ footer {
 
 .zoom-btn:active {
   background-color: rgba(0, 123, 255, 0.7);
-  transform: scale(0.9);
 }
 
 /* Media Queries for Mobile-Friendly Layout */
@@ -210,4 +209,40 @@ footer {
     p, a, li {
         font-size: 0.85rem; /* Adjust text size */
     }
+}
+
+/* Slider Styles */
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+#slider-image {
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.slider-btn {
+    background-color: rgba(0, 123, 255, 0.8);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 123, 255, 1);
+    transform: scale(1.1);
+}
+
+.slider-btn:active {
+    background-color: rgba(0, 123, 255, 0.7);
 }
