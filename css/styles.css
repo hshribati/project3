@@ -137,11 +137,11 @@ footer {
   }
 }
 
-/* Custom Zoom Controls inside the map */
+/* Custom Zoom Controls inside the map at the bottom */
 .custom-zoom {
   position: absolute;
-  top: 20px;
-  right: 20px;
+  bottom: 20px; /* Position it at the bottom */
+  right: 20px;  /* Position it to the right */
   z-index: 9999; /* Ensure buttons are on top */
   display: flex;
   flex-direction: column;
