@@ -44,37 +44,37 @@ function initMap() {
 
   // JavaScript picture slider
 
-  // Array of image paths for the slider
-  const images = [
+// Array of image paths for the slider
+const images = [
     "images/slide1.jpg",
     "images/slide2.jpg",
     "images/slide3.jpg"
-  ];
+];
 
-  let currentIndex = 0;
+let currentIndex = 0;
 
-  // Function to show the current slide image
-  function showSlide(index) {
+// Function to show the current slide image
+function showSlide(index) {
     const sliderImage = document.getElementById("slider-image");
     if (index >= 0 && index < images.length) {
-      sliderImage.src = images[index];
+        sliderImage.src = images[index];
     }
-  }
+}
 
-  // Show the next slide
-  function nextSlide() {
+// Show the next slide
+function nextSlide() {
     currentIndex = (currentIndex + 1) % images.length;
     showSlide(currentIndex);
-  }
+}
 
-  // Show the previous slide
-  function previousSlide() {
+// Show the previous slide
+function previousSlide() {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     showSlide(currentIndex);
-  }
-
-  // Initialize the slider with the first image
-  document.addEventListener("DOMContentLoaded", () => showSlide(currentIndex));
-
-  animateMarker();
 }
+
+// Initialize the slider with the first image
+document.addEventListener("DOMContentLoaded", () => {
+    showSlide(currentIndex);
+    setInterval(nextSlide, 3000);  // Change image every 3 seconds
+});
