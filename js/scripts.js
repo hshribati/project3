@@ -43,3 +43,51 @@ function initMap() {
 
   animateMarker();
 }
+
+// JavaScript file: scripts.js
+
+// Display a welcome alert when the page loads
+window.addEventListener('load', function () {
+    alert("Welcome to the site! Explore each page for more content.");
+});
+
+// Function to toggle visibility of an element
+function toggleVisibility(elementId) {
+    const element = document.getElementById(elementId);
+    if (element.style.display === "none") {
+        element.style.display = "block";
+    } else {
+        element.style.display = "none";
+    }
+}
+
+// Example usage: Add a toggle button for each section
+document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section, index) => {
+        const toggleButton = document.createElement("button");
+        toggleButton.textContent = "Show/Hide Section";
+        toggleButton.className = "toggle-btn";
+        
+        toggleButton.addEventListener("click", () => {
+            toggleVisibility(section.id);
+        });
+        
+        section.insertAdjacentElement("beforebegin", toggleButton);
+        section.id = `section-${index}`; // Assign unique IDs to each section if not already present
+    });
+});
+
+// Optional: Smooth scroll effect for navigation links
+const navLinks = document.querySelectorAll("nav a");
+navLinks.forEach(link => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const targetId = this.getAttribute("href").substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+});
+
