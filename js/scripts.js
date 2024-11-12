@@ -51,6 +51,9 @@ function initMap() {
 // JavaScript for Picture Slider
 
 // Array of image paths for the slider
+// JavaScript for Picture Slider
+
+// Array of image paths for the slider
 const images = [
     "images/slide1.jpg",
     "images/slide2.jpg",
@@ -61,10 +64,12 @@ let currentIndex = 0;
 
 // Function to show the current slide image
 function showSlide(index) {
-    const sliderImage = document.getElementById("slider-image");
-    if (index >= 0 && index < images.length) {
-        sliderImage.src = images[index];
-    }
+    const sliderWrapper = document.getElementById("slider-wrapper");
+    const totalImages = images.length;
+
+    // Calculate the new position of the wrapper
+    const newTransformValue = -(index * 100) + '%';
+    sliderWrapper.style.transform = `translateX(${newTransformValue})`;
 }
 
 // Show the next slide
