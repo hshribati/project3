@@ -44,12 +44,6 @@ function initMap() {
   animateMarker();
 }
 
-// JavaScript file: scripts.js
-
-// Display a welcome alert when the page loads
-window.addEventListener('load', function () {
-    alert("Welcome to the site! Explore each page for more content.");
-});
 
 // Function to toggle visibility of an element
 function toggleVisibility(elementId) {
