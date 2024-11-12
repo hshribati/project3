@@ -23,7 +23,7 @@ function initMap() {
     map: map,
     icon: {
       url: 'images/arrow-icon.png',
-      scaledSize: new google.maps.Size(20, 20),
+      scaledSize: new google.maps.Size(50, 50),
       anchor: new google.maps.Point(10, 20)
     }
   });
@@ -38,7 +38,7 @@ function initMap() {
     if (offset > 10 || offset < -10) {
       direction *= -1;
     }
-    setTimeout(animateMarker, 70);
+    setTimeout(animateMarker, 50);
   }
 
   animateMarker();
