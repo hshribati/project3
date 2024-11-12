@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Falafel</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
     <script src="js/scripts.js" defer></script>
 </head>
 
@@ -58,6 +58,24 @@
         </section>
 
         <p>For more information, visit <a href="https://en.wikipedia.org/wiki/Falafel" target="_blank">Falafel on Wikipedia</a>.</p>
+
+        <!-- Picture Slider Section -->
+        <section>
+            <h2>Falafel Picture Gallery</h2>
+            <div id="slider-container">
+                <img id="slider-image" src="images/slide1.jpg" alt="Slider Image" width="600" height="400">
+                <button id="prev" onclick="previousSlide()">Previous</button>
+                <button id="next" onclick="nextSlide()">Next</button>
+            </div>
+        </section>
+
+        <!-- Google Map Section -->
+        <section>
+            <h2>Find Us on the Map</h2>
+            <div id="map" style="width: 100%; height: 400px;"></div>
+            <button id="zoom-in">Zoom In</button>
+            <button id="zoom-out">Zoom Out</button>
+        </section>
 
     </main>
 
