@@ -19,6 +19,7 @@ function initMap() {
     map.setZoom(currentZoom - 1);  // Zoom out
   });
 
+  // Custom Marker with Animation
   var marker = new google.maps.Marker({
     position: location,
     map: map,
@@ -32,6 +33,7 @@ function initMap() {
   var offset = 0;
   var direction = 1;
 
+  // Function to animate the marker
   function animateMarker() {
     var newLat = location.lat + (offset * 0.0015);
     marker.setPosition({lat: newLat, lng: location.lng});
@@ -42,7 +44,11 @@ function initMap() {
     setTimeout(animateMarker, 50);
   }
 
-  // JavaScript picture slider
+  // Start marker animation
+  animateMarker();
+}
+
+// JavaScript for Picture Slider
 
 // Array of image paths for the slider
 const images = [
