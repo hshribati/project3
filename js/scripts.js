@@ -1,3 +1,4 @@
+// Initialize Google Map with custom zoom and animated marker
 function initMap() {
   var location = {lat: -34.397, lng: 150.644};  
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -41,7 +42,39 @@ function initMap() {
     setTimeout(animateMarker, 50);
   }
 
+  // JavaScript picture slider
+
+  // Array of image paths for the slider
+  const images = [
+    "images/slide1.jpg",
+    "images/slide2.jpg",
+    "images/slide3.jpg"
+  ];
+
+  let currentIndex = 0;
+
+  // Function to show the current slide image
+  function showSlide(index) {
+    const sliderImage = document.getElementById("slider-image");
+    if (index >= 0 && index < images.length) {
+      sliderImage.src = images[index];
+    }
+  }
+
+  // Show the next slide
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showSlide(currentIndex);
+  }
+
+  // Show the previous slide
+  function previousSlide() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showSlide(currentIndex);
+  }
+
+  // Initialize the slider with the first image
+  document.addEventListener("DOMContentLoaded", () => showSlide(currentIndex));
+
   animateMarker();
 }
-
-
