@@ -1,4 +1,3 @@
-/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
@@ -55,7 +54,6 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* Float for layout */
 .image-content {
   display: flex;
   align-items: center;
@@ -89,7 +87,6 @@ ul {
   margin-left: 2rem;
 }
 
-/* Float for layout */
 footer {
   text-align: center;
   margin-top: 2rem;
@@ -115,7 +112,6 @@ footer {
   transform: scale(1.02);
 }
 
-/* Custom Zoom Controls inside the map at the bottom */
 .custom-zoom {
   position: absolute;
   bottom: 20px;
@@ -147,40 +143,36 @@ footer {
   background-color: rgba(0, 123, 255, 0.7);
 }
 
-/* Media Queries for Mobile-Friendly Layout */
-
-/* First media query for tablets and larger phones */
 @media (min-width: 480px) and (max-width: 768px) {
     body {
         padding: 1rem;
     }
 
     nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
+        flex-direction: column;
         text-align: center;
     }
 
     .center-image {
-        width: 100%; /* Full-width image */
-        margin-right: 0; /* Remove side margin */
+        width: 100%;
+        margin-right: 0;
     }
 
     .text-content {
-        float: none; /* Remove floating for better readability */
+        float: none;
         max-width: 100%;
         padding: 1rem;
     }
 
     section {
-        margin-bottom: 1.5rem; /* Reduce margin spacing */
+        margin-bottom: 1.5rem;
     }
 
     h1 {
-        font-size: 2.5rem; /* Adjust heading size */
+        font-size: 2.5rem;
     }
 }
 
-/* Second media query for smaller mobile screens */
 @media (max-width: 479px) {
     nav ul {
         flex-direction: column;
@@ -199,7 +191,7 @@ footer {
 
     section {
         padding: 1rem;
-        font-size: 0.9rem; /* Adjust font size for smaller screens */
+        font-size: 0.9rem;
     }
 
     h1 {
@@ -207,15 +199,14 @@ footer {
     }
 
     p, a, li {
-        font-size: 0.85rem; /* Adjust text size */
+        font-size: 0.85rem;
     }
 }
 
-/* Add to your CSS file (styles.css) */
 #slider-container {
   width: 100%;
   height: 400px;
-  overflow: hidden; /* Hide the overflow to show only one image at a time */
+  overflow: hidden;
   position: relative;
   display: flex;
   justify-content: center;
@@ -224,14 +215,14 @@ footer {
 
 #slider-wrapper {
   display: flex;
-  transition: transform 0.5s ease; /* Smooth sliding transition */
+  transition: transform 0.5s ease;
 }
 
 #slider-container img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensure the images fill the space without distortion */
-  flex-shrink: 0; /* Prevent images from shrinking */
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 #slider-container button {
