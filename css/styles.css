@@ -21,12 +21,13 @@ nav {
 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
+  display: block; /* Changing to block to remove flex and return to normal */
+  text-align: left; /* Align to the left instead of center */
 }
 
 nav ul li {
-  margin: 0 1.5rem;
+  display: inline-block; /* Keep items inline */
+  margin-right: 2rem; /* Space out items */
 }
 
 nav ul li a {
@@ -149,9 +150,13 @@ footer {
     }
 
     nav ul {
-        flex-direction: row; /* Keep horizontal layout */
-        justify-content: center; /* Keep centered */
-        text-align: center;
+        display: block; /* Maintain block display */
+        text-align: left; /* Align items to the left */
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 2rem;
     }
 
     .center-image {
@@ -176,7 +181,8 @@ footer {
 
 @media (min-width: 768px) {
     nav ul {
-        flex-direction: row; /* Ensure items stay horizontal */
+        display: block; /* Keep the original layout for the nav */
+        text-align: left; /* Align to left */
     }
 
     .image-content {
@@ -208,7 +214,8 @@ footer {
     }
 
     nav ul {
-        justify-content: space-around; /* Space out the items */
+        display: block;
+        text-align: left; /* Keeping it left-aligned */
     }
 
     .center-image {
