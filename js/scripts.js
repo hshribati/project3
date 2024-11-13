@@ -1,7 +1,7 @@
 function initMap() {
-  var location = {lat: 41.8781, lng: -87.6298};  // Center of Chicago
+  var location = {lat: 41.8781, lng: -87.6298};
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,  // A broader view of Chicago
+    zoom: 12,
     center: location,
     zoomControl: false
   });
@@ -36,23 +36,20 @@ function initMap() {
     if (offset > 10 || offset < -10) {
       direction *= -1;
     }
-    setTimeout(animateMarker, 150);  // Slower movement
+    setTimeout(animateMarker, 150);
   }
 
   animateMarker();
 
-  // Gradually zoom out the map
   let zoomOutInterval = setInterval(function() {
     let currentZoom = map.getZoom();
-    if (currentZoom > 8) {  // Stop at a broader view of Chicago
+    if (currentZoom > 8) {
       map.setZoom(currentZoom - 1);
     } else {
-      clearInterval(zoomOutInterval);  // Stop zooming out when the target zoom level is reached
+      clearInterval(zoomOutInterval);
     }
-  }, 1000);  // Zoom out every 1 second
+  }, 1000);
 }
-
-// JavaScript for Picture Slider
 
 const images = [
     "images/slide1.jpg",
