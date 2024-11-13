@@ -1,7 +1,7 @@
 function initMap() {
-  var location = {lat: -34.397, lng: 150.644};  
+  var location = {lat: 41.8827, lng: -87.6233};  // Coordinates for The Bean in Chicago
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 8,
+    zoom: 15,
     center: location,
     zoomControl: false
   });
@@ -41,6 +41,8 @@ function initMap() {
 
   animateMarker();
 }
+
+// JavaScript for Picture Slider
 
 const images = [
     "images/slide1.jpg",
