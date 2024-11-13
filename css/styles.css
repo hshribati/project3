@@ -149,7 +149,8 @@ footer {
     }
 
     nav ul {
-        flex-direction: column;
+        flex-direction: row; /* Keep horizontal layout */
+        justify-content: center; /* Keep centered */
         text-align: center;
     }
 
@@ -175,7 +176,7 @@ footer {
 
 @media (min-width: 768px) {
     nav ul {
-        flex-direction: row;
+        flex-direction: row; /* Ensure items stay horizontal */
     }
 
     .image-content {
@@ -207,7 +208,7 @@ footer {
     }
 
     nav ul {
-        justify-content: space-around;
+        justify-content: space-around; /* Space out the items */
     }
 
     .center-image {
