@@ -40,15 +40,6 @@ function initMap() {
   }
 
   animateMarker();
-
-  let zoomOutInterval = setInterval(function() {
-    let currentZoom = map.getZoom();
-    if (currentZoom > 8) {
-      map.setZoom(currentZoom - 1);
-    } else {
-      clearInterval(zoomOutInterval);
-    }
-  }, 1000);
 }
 
 const images = [
