@@ -1,7 +1,7 @@
 function initMap() {
-  var location = {lat: 41.8827, lng: -87.6233};  // Coordinates for The Bean in Chicago
+  var location = {lat: 41.8781, lng: -87.6298};  // Center of Chicago
   var map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 15,
+    zoom: 12,  // A broader view of Chicago
     center: location,
     zoomControl: false
   });
@@ -36,10 +36,20 @@ function initMap() {
     if (offset > 10 || offset < -10) {
       direction *= -1;
     }
-    setTimeout(animateMarker, 100);
+    setTimeout(animateMarker, 150);  // Slower movement
   }
 
   animateMarker();
+
+  // Gradually zoom out the map
+  let zoomOutInterval = setInterval(function() {
+    let currentZoom = map.getZoom();
+    if (currentZoom > 8) {  // Stop at a broader view of Chicago
+      map.setZoom(currentZoom - 1);
+    } else {
+      clearInterval(zoomOutInterval);  // Stop zooming out when the target zoom level is reached
+    }
+  }, 1000);  // Zoom out every 1 second
 }
 
 // JavaScript for Picture Slider
