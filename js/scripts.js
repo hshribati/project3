@@ -36,7 +36,7 @@ function initMap() {
     if (offset > 10 || offset < -10) {
       direction *= -1;
     }
-    setTimeout(animateMarker, 50);
+    setTimeout(animateMarker, 100);
   }
 
   animateMarker();
